@@ -1,6 +1,12 @@
 ### Laravel tips, Development pattern
 
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
+* Class names MUST be declared in `StudlyCaps`.
+* Class constants MUST be declared in all upper case with underscore separators.
+* Method names MUST be declared in `camelCase`.
+* Property names MUST be declared in `camelCase`.
+* Property names MUST start with an initial underscore if they are private.
+* Always use `elseif` instead of `else if`.
 * All models should be placed in “models” folder
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
