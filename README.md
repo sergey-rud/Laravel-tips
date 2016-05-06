@@ -24,7 +24,7 @@ Schema::create('users', function ($table) {
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => false,
-            'timezone'    => 'UTC',
+            'timezone'  => 'UTC',
         ],
 
     ],
