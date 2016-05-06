@@ -36,6 +36,7 @@ class Foo
 ```
 #### File structure
 * All models should be placed in “models” folder
+
 #### Comments
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
