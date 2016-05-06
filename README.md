@@ -6,9 +6,7 @@
 * Use short array syntax only.
 * Class names MUST be declared in `StudlyCaps`.
 * Class constants MUST be declared in all upper case with underscore separators.
-* Method names MUST be declared in `camelCase`.
-* Property names MUST be declared in `camelCase`.
-* Property names MUST start with an initial underscore if they are private, eg `$_varName`.
+* Method and Property names MUST be declared in `camelCase`.
 * Always use `elseif` instead of `else if`.
 * When declaring public class members specify `public` keyword explicitly.
 * For better readability there should be no blank lines between property declarations and two blank lines
