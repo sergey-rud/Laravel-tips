@@ -14,9 +14,7 @@ Bad example:
  */
 class Product
 {
-    /**
-     * @var null|int
-     */
+
     public $price = null;
     
     /*
