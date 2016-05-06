@@ -5,7 +5,6 @@
 * Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
 * Use short array syntax only.
 * Class names MUST be declared in `StudlyCaps`.
-* Class constants MUST be declared in all upper case with underscore separators.
 * Method and Property names MUST be declared in `camelCase`.
 * Always use `elseif` instead of `else if`.
 * When declaring public class members specify `public` keyword explicitly.
