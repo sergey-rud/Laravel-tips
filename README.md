@@ -141,10 +141,10 @@ class UploadHandler
 Additional rules
 ----------------
 
-### `=== []` vs `empty()`
+###### `=== []` vs `empty()`
 
 Use `empty()` where possible.
 
-### `=== null` vs `is_null()`
+###### `=== null` vs `is_null()`
 
 Use `=== null` or `empty()` where possible.
