@@ -144,3 +144,7 @@ Additional rules
 ### `=== []` vs `empty()`
 
 Use `empty()` where possible.
+
+### `=== null` vs `is_null()`
+
+Use `=== null` or `empty()` where possible.
