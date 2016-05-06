@@ -10,27 +10,24 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
-* Use PDO Connection Options to set DB timezone to UTC :
+* Always set DB timezone manually:
 ```php
-return array(
+    'connections' => [
 
-    'connections' => array(
-
-        'mysql' => array(
+        'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'database'  => 'database',
-            'username'  => 'root',
-            'password'  => '',
+            'host'      => env('DB_HOST', 'localhost'),
+            'database'  => env('DB_DATABASE', 'forge'),
+            'username'  => env('DB_USERNAME', 'forge'),
+            'password'  => env('DB_PASSWORD', ''),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'options'   => array(
-                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = '+00:00'",
-            ),
-        ),
-    )
-)
+            'strict'    => false,
+            'timezone'    => 'UTC',
+        ],
+
+    ],
 ```
 
 ##Development pattern
