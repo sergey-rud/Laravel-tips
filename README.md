@@ -2,6 +2,14 @@
 
 ### Code Style
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
+* All PHP types and values should be used lowercase. That includes `true`, `false`, `null` and `array`. Changing type of an existing variable is considered as a bad practice. Try not to write such code unless it is really necessary.
+```php
+public function save(Transaction $transaction, $argument2 = 100)
+{
+    $transaction = new Connection; // bad
+    $argument2 = 200; // good
+}
+```
 * Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
 * Use short array syntax only.
 * Class names MUST be declared in `StudlyCaps`.
