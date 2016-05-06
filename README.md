@@ -10,7 +10,7 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
-* Always set DB timezone manually:
+* Always set DB timezone manually, also use strict MySQL mode:
 ```php
     'connections' => [
 
@@ -23,7 +23,7 @@ Schema::create('users', function ($table) {
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'strict'    => false,
+            'strict'    => true,
             'timezone'  => 'UTC',
         ],
 
