@@ -21,7 +21,7 @@ class UploadHandler
         
         //save log
         $log = new UploadLog();
-        $log->user()->associate(Auth::user()); // it's sad
+        $log->user()->associate(Auth::user()); // it's sad, because we use $_SESSION here
         $log->filename = $filename;
         $log->save();
     }
