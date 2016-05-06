@@ -8,13 +8,11 @@
 * Class constants MUST be declared in all upper case with underscore separators.
 * Method names MUST be declared in `camelCase`.
 * Property names MUST be declared in `camelCase`.
-* Property names MUST start with an initial underscore if they are private.
+* Property names MUST start with an initial underscore if they are private, eg `$_varName`.
 * Always use `elseif` instead of `else if`.
 * When declaring public class members specify `public` keyword explicitly.
 * For better readability there should be no blank lines between property declarations and two blank lines
   between property and method declaration sections. One blank line should be added between the different visibility groups.
-* Private variables should be named like `$_varName`.
-* Public class members and standalone variables should be named using `$camelCase` with first letter lowercase.
 
 Example:
 
