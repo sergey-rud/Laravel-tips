@@ -1,6 +1,9 @@
 ### Laravel tips, Development pattern
 
+#### Code Style
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
+* Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
+* Use short array syntax only.
 * Class names MUST be declared in `StudlyCaps`.
 * Class constants MUST be declared in all upper case with underscore separators.
 * Method names MUST be declared in `camelCase`.
@@ -8,7 +11,34 @@
 * Property names MUST start with an initial underscore if they are private.
 * Always use `elseif` instead of `else if`.
 * When declaring public class members specify `public` keyword explicitly.
+* For better readability there should be no blank lines between property declarations and two blank lines
+  between property and method declaration sections. One blank line should be added between the different visibility groups.
+* Private variables should be named like `$_varName`.
+* Public class members and standalone variables should be named using `$camelCase` with first letter lowercase.
+
+Example:
+
+```php
+<?php
+class Foo
+{
+    public $publicProp1;
+    public $publicProp2;
+
+    protected $protectedProp;
+
+    private $_privateProp;
+
+
+    public function someMethod()
+    {
+        // ...
+    }
+}
+```
+#### File structure
 * All models should be placed in “models” folder
+#### Comments
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
 
@@ -47,6 +77,7 @@ class Product
      */
 }
 ```
+#### Logic
 * Each DB migration script should have Table Engine declaration
 
 Example:
@@ -56,7 +87,6 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
-* Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
 * Classes and methods shouldn’t be used in the Views (controller should handle all logic and pass simple array to view)
 * Model method shouldn’t use global scope, eg $_SESSION, $_SERVER, $_COOKIE, etc. Please use Controllers to retrieve such info and pass it to Model method **as arguments**.
 
@@ -100,4 +130,3 @@ class UploadHandler
 ```
 * All models should extend custom BaseModel, all controllers should extend custom BaseController.
 * BaseModel and BaseController shouldn't ovveride default Framework behavior, however it may extend functionality by adding new methods.
-* Use short array syntax only.
