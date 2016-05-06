@@ -10,6 +10,30 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
+* Use PDO Connection Options:
+```php
+return array(
+
+    /* other settings removed for brevity */
+    'connections' => array(
+
+
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'database',
+            'username'  => 'root',
+            'password'  => '',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'options'   => array(
+                 PDO::MYSQL_ATTR_INIT_COMMAND => "SET time_zone = '+00:00'",
+            ),
+        ),
+    )
+)
+```
 
 ##Development pattern
 
