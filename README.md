@@ -7,6 +7,7 @@
 * Property names MUST be declared in `camelCase`.
 * Property names MUST start with an initial underscore if they are private.
 * Always use `elseif` instead of `else if`.
+* When declaring public class members specify `public` keyword explicitly.
 * All models should be placed in “models” folder
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
