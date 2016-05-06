@@ -145,6 +145,7 @@ Additional rules
 
 Use `empty()` where possible.
 
+
 ###### `=== null` vs `is_null()`
 
 Use `=== null` or `empty()` where possible.
