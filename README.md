@@ -5,6 +5,7 @@
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
 * Each DB migration script should have Table Engine declaration
+
 Example:
 ```php
 Schema::create('users', function ($table) {
