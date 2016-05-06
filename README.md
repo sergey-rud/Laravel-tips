@@ -10,7 +10,7 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
-* Use PDO Connection Options:
+* Use PDO Connection Options to set DB timezone to UTC :
 ```php
 return array(
 
