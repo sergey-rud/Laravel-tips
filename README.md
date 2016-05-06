@@ -137,3 +137,10 @@ class UploadHandler
 ```
 * All models should extend custom BaseModel, all controllers should extend custom BaseController.
 * BaseModel and BaseController shouldn't ovveride default Framework behavior, however it may extend functionality by adding new methods.
+
+Additional rules
+----------------
+
+### `=== []` vs `empty()`
+
+Use `empty()` where possible.
