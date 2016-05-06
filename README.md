@@ -1,6 +1,19 @@
 # Laravel tips. Development pattern
 
-## Code Style
+##Laravel tips
+* Each DB migration script should have Table Engine declaration
+
+Example:
+```php
+Schema::create('users', function ($table) {
+   $table->engine = 'InnoDB';
+   $table->increments('id');
+});
+```
+
+##Development pattern
+
+### Code Style
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
 * Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
 * Use short array syntax only.
@@ -31,10 +44,10 @@ class Foo
     }
 }
 ```
-## File structure
+### File structure
 * All models should be placed in “models” folder
 
-## Comments
+### Comments
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
 
@@ -73,16 +86,8 @@ class Product
      */
 }
 ```
-## Logic
-* Each DB migration script should have Table Engine declaration
+### Logic
 
-Example:
-```php
-Schema::create('users', function ($table) {
-   $table->engine = 'InnoDB';
-   $table->increments('id');
-});
-```
 * Classes and methods shouldn’t be used in the Views (controller should handle all logic and pass simple array to view)
 * Model method shouldn’t use global scope, eg $_SESSION, $_SERVER, $_COOKIE, etc. Please use Controllers to retrieve such info and pass it to Model method **as arguments**.
 
@@ -135,8 +140,7 @@ public function save(Transaction $transaction, $argument2 = 100)
 }
 ```
 
-Additional rules
-----------------
+###Additional rules
 
 ###### `=== []` vs `empty()`
 
