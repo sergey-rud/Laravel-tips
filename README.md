@@ -4,6 +4,45 @@
 * All models should be placed in “models” folder
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
+
+Bad example:
+```php
+/**
+ * @property null|int $price // it shouldn't be here, because it's NOT magic property
+ * @property string $name
+ * @property ProductUser[]|\Illuminate\Database\Eloquent\Collection $productUsers
+ */
+class Product
+{
+    /**
+     * @var null|int
+     */
+    public $price = null;
+    
+    /*
+     * other code ...
+     */
+}
+```
+
+Good example:
+```php
+/**
+ * @property string $name
+ * @property ProductUser[]|\Illuminate\Database\Eloquent\Collection $productUsers
+ */
+class Product
+{
+    /**
+     * @var null|int
+     */
+    public $price = null;
+    
+    /*
+     * other code ...
+     */
+}
+```
 * Each DB migration script should have Table Engine declaration
 
 Example:
