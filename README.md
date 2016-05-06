@@ -1,6 +1,6 @@
-### Laravel tips, Development pattern
+## Laravel tips, Development pattern
 
-#### Code Style
+### Code Style
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
 * Strings should be placed in single quotes instead of double quotes for both PHP and JavaScript. HTML attributes and CSS should use double quotes only.
 * Use short array syntax only.
@@ -34,10 +34,10 @@ class Foo
     }
 }
 ```
-#### File structure
+### File structure
 * All models should be placed in “models” folder
 
-#### Comments
+### Comments
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
 
@@ -76,7 +76,7 @@ class Product
      */
 }
 ```
-#### Logic
+### Logic
 * Each DB migration script should have Table Engine declaration
 
 Example:
