@@ -1,5 +1,6 @@
 ### Laravel tips, Development pattern
 
+* Code style: PSR1/PSR2 with blank line before return statement
 * All models should be placed in “models” folder
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
