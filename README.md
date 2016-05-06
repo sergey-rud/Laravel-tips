@@ -1,6 +1,6 @@
-## Laravel tips, Development pattern
+# Laravel tips. Development pattern
 
-### Code Style
+## Code Style
 * Code style: PSR1/PSR2 with blank line before return statement (use CTRL+ALT+L before commit)
 * All PHP types and values should be used lowercase. That includes `true`, `false`, `null` and `array`. Changing type of an existing variable is considered as a bad practice. Try not to write such code unless it is really necessary.
 ```php
@@ -42,10 +42,10 @@ class Foo
     }
 }
 ```
-### File structure
+## File structure
 * All models should be placed in “models” folder
 
-### Comments
+## Comments
 * Each class, method and property should have phpDoc description
 * Class description should contains only **magic** fields and methods
 
@@ -84,7 +84,7 @@ class Product
      */
 }
 ```
-### Logic
+## Logic
 * Each DB migration script should have Table Engine declaration
 
 Example:
