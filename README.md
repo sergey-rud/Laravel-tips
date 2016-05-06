@@ -14,9 +14,7 @@ Schema::create('users', function ($table) {
 ```php
 return array(
 
-    /* other settings removed for brevity */
     'connections' => array(
-
 
         'mysql' => array(
             'driver'    => 'mysql',
