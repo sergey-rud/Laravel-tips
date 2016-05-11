@@ -28,3 +28,4 @@ Schema::create('users', function ($table) {
 
     ],
 ```
+* All models should be placed in “models” folder
