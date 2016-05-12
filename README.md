@@ -29,3 +29,4 @@ Schema::create('users', function ($table) {
     ],
 ```
 * All models should be placed in “models” folder
+* Do not use reserved Eloquent ORM fields as names for DB columns. For example, do not use next column names: `table`, `guarded`, `hidden`, `visible`, `fillable`, etc. This leads to unexpected behavior during filtration collections (Illuminate/Database/Eloquent/Collection).
