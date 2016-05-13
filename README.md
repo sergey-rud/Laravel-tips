@@ -5,7 +5,7 @@
 Example:
 ```php
 Schema::create('users', function ($table) {
-   $table->engine = 'InnoDB';
+   $table->engine = 'InnoDB'; //that's right way
    $table->increments('id');
 });
 ```
@@ -22,8 +22,8 @@ Schema::create('users', function ($table) {
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'strict'    => true,
-            'timezone'  => 'UTC',
+            'strict'    => true, // set true here
+            'timezone'  => 'UTC', // set UTC here
         ],
 
     ],
