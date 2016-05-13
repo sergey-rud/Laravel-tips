@@ -37,12 +37,10 @@ Bad example:
     protected function schedule(Schedule $schedule)
     {
         $user = User::find(1);
-
-        if (!empty($user)) {
-            $schedule->call(function () use ($user) {
-                $user->changePassword();
-            })->cron($user->getCron());
-        }
+        
+         $schedule->call(function () use ($user) {
+             $user->changePassword();
+         })->cron($user->getCron());
     }
 ```
 Good example:
@@ -51,6 +49,7 @@ Good example:
     {
         $schedule->call(function () {
             $user = User::find(1);
+            
             if ($user->isItTimeToChangePassword()) {
                 $user->changePassword();
             }
