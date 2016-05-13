@@ -9,7 +9,7 @@ Schema::create('users', function ($table) {
    $table->increments('id');
 });
 ```
-* Always set DB timezone manually, also use strict MySQL mode:
+* Always set DB `timezone` manually, also use `strict` MySQL mode:
 ```php
     'connections' => [
 
@@ -28,5 +28,5 @@ Schema::create('users', function ($table) {
 
     ],
 ```
-* All models should be placed in “models” folder
-* Do not use reserved Eloquent ORM fields as names for DB columns. For example, do not use next column names: `table`, `guarded`, `hidden`, `visible`, `fillable`, etc. This leads to unexpected behavior during filtration collections (Illuminate/Database/Eloquent/Collection).
+* All models should be placed in `models` folder
+* Do not use reserved Eloquent ORM fields as names for DB columns. For example, do not use next DB column names: `table`, `guarded`, `hidden`, `visible`, `fillable`, etc. This leads to unexpected behavior during filtration collections (Illuminate/Database/Eloquent/Collection).
