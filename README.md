@@ -36,11 +36,11 @@ Bad example:
 ```php
     protected function schedule(Schedule $schedule)
     {
-        $user = User::find(1);
+        $user = User::find(1); // shouldn't be here
         
          $schedule->call(function () use ($user) {
              $user->changePassword();
-         })->cron($user->getCron());
+         })->cron($user->getCron()); // $user->getCron() shouldn't be here
     }
 ```
 Good example:
