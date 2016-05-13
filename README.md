@@ -56,3 +56,5 @@ Good example:
         })->everyMinute();
     }
 ```
+
+* Use `.gitignore.example` from this repo to create or modify `.gitignore` in the root Framework folder.
