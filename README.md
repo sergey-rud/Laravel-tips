@@ -23,7 +23,7 @@ Schema::create('users', function ($table) {
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
             'strict'    => true, // set true here
-            'timezone'  => 'UTC', // set UTC here
+            'timezone'  => '+00:00', // set UTC timezone here
         ],
 
     ],
